@@ -21,8 +21,19 @@ import ReactDOM from 'react-dom/client';
  * 
  */
 // 
+// React Element
+const headingElement = React.createElement("h1",{ className :"heading"}, "Hello World using creatElement!");
+// JSX Element
+const heading = <h1>Hello World using JSX</h1>;
 
-const heading = <h1>Namaste React </h1>;
-
+// Functional Component
+//1. Using return
+const HeadingComponent1 = () => {
+  return <h1 className = "heading"> Hello World using functional component using return</h1>
+};
+//2. without using return
+const HeadingComponent2 = () => (
+  <h1 className = "heading"> Hello World using functional component using return</h1>
+);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(heading);
