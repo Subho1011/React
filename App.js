@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
 // Heading is just an object and not an <h1> Tag
 // Props of an object are attributes + children
 
@@ -17,21 +20,9 @@
  * 
  * 
  */
-const parent = React.createElement(
-  "div",
-  {id: "parent"},
-  React.createElement(
-    "div",
-    {id: "child"},
-    [React.createElement("h1" , {}, "I am h1 tag"), React.createElement("h2", {}, "I am h2 tag")]
-  ));
-const header = React.createElement(
-  "h1",
-  { id: "heading"},
-  'Hello world from React!');
+// 
 
-  console.log(parent, typeof(header));
+const heading = <h1>Namaste React </h1>;
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-// The render method is taking the object header and converts it into <h1> tag
-root.render(parent)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(heading);
