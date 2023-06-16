@@ -35,5 +35,15 @@ const HeadingComponent1 = () => {
 const HeadingComponent2 = () => (
   <h1 className = "heading"> Hello World using functional component using return</h1>
 );
+
+//Compoenet Composition
+const HeadingComponent3 = () => {
+  return (<div id = "container">
+    <HeadingComponent1/>
+    <HeadingComponent2/>
+    <h1 className = "heading">This is componenet composition. Putting compoenets inside compoenet</h1>
+  </div>);
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(heading);
+// root.render(heading);
+root.render(<HeadingComponent3/>);
